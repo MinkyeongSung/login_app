@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:login_app/components/custom_text_form_feild.dart';
+import 'package:login_app/components/custom_login_form.dart';
 import 'package:login_app/components/logo.dart';
 import 'package:login_app/size.dart';
 
@@ -16,10 +15,9 @@ class LoginPage extends StatelessWidget {
           child: ListView(
             // inset 영역 때문에
             children: [
+              SizedBox(height: xlarge_gap),
               Logo("Login"),
-              CustomTextFormField(text: "Email"),
-              CustomTextFormField(text: "Password", isPassword: true),
-              TextButton(onPressed: () {}, child: Text("Login"))
+              CustomLoginForm(),
             ],
           ),
         ));

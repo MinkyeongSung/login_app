@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:login_app/pages/home_page.dart';
-import 'package:login_app/pages/login.page.dart';
+import 'package:login_app/pages/join_page.dart';
+import 'package:login_app/pages/login_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: buildThemeData(),
-      debugShowCheckedModeBanner: false,
-      initialRoute: "/login",
+      initialRoute: "/join",
       routes: {
-        "/login": (context) => LoginPage(), // {}맵타입
+        "/login": (context) => LoginPage(),
         "/home": (context) => HomePage(),
+        "/join": (context) => JoinPage(),
       },
     );
   }
